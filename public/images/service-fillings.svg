@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="720" viewBox="0 0 960 720" fill="none">
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#F0FAFA"/>
+    <stop offset="1" stop-color="#D5F2F1"/>
+  </linearGradient>
+  <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#FFFFFF"/>
+    <stop offset="1" stop-color="#F6FAFB"/>
+  </linearGradient>
+</defs>
+<rect width="960" height="720" fill="url(#bg)"/>
+<circle cx="480" cy="330" r="250" fill="#FFFFFF" opacity="0.65"/>
+<circle cx="480" cy="330" r="180" fill="#D5F2F1"/>
+<rect x="690" y="470" width="150" height="150" rx="36" fill="#FFFFFF" opacity="0.7"/>
+<circle cx="200" cy="540" r="80" fill="#FFFFFF" opacity="0.5"/>
+<g stroke="#97A87A" stroke-width="16" stroke-linejoin="round">
+<path d="M480 500c-70 0-112-46-104-128 8-76 38-146 104-146s96 70 104 146c8 82-34 128-104 128Z" fill="#FFFFFF"/>
+</g>
+<circle cx="480" cy="330" r="58" fill="#D5F2F1" stroke="#97A87A" stroke-width="12"/>
+<path d="M480 302v56M452 330h56" stroke="#97A87A" stroke-width="12" stroke-linecap="round"/>
+<path d="M710 158L716.16 173.84L732 180L716.16 186.16L710 202L703.84 186.16L688 180L703.84 173.84Z" fill="#DB9558"/>
+<path d="M235 245L239.2 255.8L250 260L239.2 264.2L235 275L230.8 264.2L220 260L230.8 255.8Z" fill="#97A87A"/>
+<circle cx="740" cy="300" r="10" fill="#DB9558"/>
+</svg>

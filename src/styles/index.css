@@ -1,0 +1,362 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: auto;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-cloud font-body text-ink-700 antialiased;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    @apply font-heading font-bold text-cosmic;
+    letter-spacing: -0.02em;
+  }
+
+  /* Bangla uses Hind Siliguri everywhere, with more generous line height. */
+  html[lang="bn"] body,
+  html[lang="bn"] h1,
+  html[lang="bn"] h2,
+  html[lang="bn"] h3,
+  html[lang="bn"] h4,
+  html[lang="bn"] h5,
+  html[lang="bn"] button,
+  html[lang="bn"] input,
+  html[lang="bn"] select,
+  html[lang="bn"] textarea {
+    @apply font-bangla;
+  }
+
+  html[lang="bn"] body {
+    line-height: 1.65;
+  }
+
+  html[lang="bn"] h1,
+  html[lang="bn"] h2,
+  html[lang="bn"] h3 {
+    letter-spacing: 0;
+  }
+
+  :focus-visible {
+    outline: 2px solid #e75e15;
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  ::selection {
+    background-color: #f3c6ac;
+    color: #15252d;
+  }
+}
+
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-page px-5 sm:px-6 lg:px-8;
+  }
+
+  .section {
+    @apply py-12 md:py-20;
+  }
+
+  /* Type scale from design.md: display 50, heading-lg 38, heading 30, body 16. */
+  .type-hero {
+    font-size: 38px;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    font-weight: 900;
+  }
+  .type-section {
+    font-size: 28px;
+    line-height: 1.25;
+    letter-spacing: -0.02em;
+    font-weight: 700;
+  }
+  .type-card {
+    font-size: 20px;
+    line-height: 1.35;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+  }
+  .type-body-lg {
+    font-size: 17px;
+    line-height: 1.6;
+  }
+  .type-body {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  .type-small {
+    font-size: 14px;
+    line-height: 1.45;
+  }
+  .type-btn {
+    font-size: 15px;
+    line-height: 1.1;
+    font-weight: 500;
+  }
+
+  @media (min-width: 768px) {
+    .type-hero {
+      font-size: 50px;
+    }
+    .type-section {
+      font-size: 38px;
+    }
+    .type-card {
+      font-size: 24px;
+    }
+    .type-body-lg {
+      font-size: 20px;
+    }
+  }
+
+  html[lang="bn"] .type-hero {
+    line-height: 1.3;
+    letter-spacing: 0;
+    font-weight: 700;
+  }
+  html[lang="bn"] .type-section {
+    line-height: 1.3;
+    letter-spacing: 0;
+  }
+  html[lang="bn"] .type-card {
+    line-height: 1.45;
+  }
+  html[lang="bn"] .type-body,
+  html[lang="bn"] .type-body-lg {
+    line-height: 1.7;
+  }
+  html[lang="bn"] .type-small {
+    line-height: 1.65;
+  }
+
+  /* Fira Code is the console signal: micro-labels only, never body copy. */
+  .eyebrow {
+    @apply font-mono text-xs font-medium uppercase tracking-[0.08em] text-signal-700;
+  }
+  .eyebrow-light {
+    @apply text-signal;
+  }
+  html[lang="bn"] .eyebrow {
+    letter-spacing: 0.02em;
+    font-size: 13px;
+    text-transform: none;
+  }
+
+  .field-label {
+    @apply mb-2 block text-sm font-medium text-cosmic;
+  }
+
+  .field-input {
+    @apply h-[52px] w-full rounded-lg border border-mist bg-cloud px-4 text-base text-cosmic placeholder:text-ink-500 focus:border-signal focus:outline-none focus:ring-2 focus:ring-signal/25;
+  }
+
+  .field-error {
+    @apply mt-2 flex items-start gap-1.5 text-sm font-medium text-signal-700;
+  }
+
+  /* Dark stage: starfield grid plus dot accents, clipped inside the panel. */
+  .starfield-grid {
+    background-image:
+      linear-gradient(to right, rgba(159, 178, 188, 0.1) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(159, 178, 188, 0.1) 1px, transparent 1px);
+    background-size: 64px 64px;
+  }
+
+  .starfield-dots {
+    background-image:
+      radial-gradient(1.5px 1.5px at 12% 18%, rgba(226, 232, 240, 0.55) 50%, transparent 51%),
+      radial-gradient(1px 1px at 28% 64%, rgba(226, 232, 240, 0.4) 50%, transparent 51%),
+      radial-gradient(1.5px 1.5px at 41% 12%, rgba(226, 232, 240, 0.45) 50%, transparent 51%),
+      radial-gradient(1px 1px at 57% 82%, rgba(226, 232, 240, 0.5) 50%, transparent 51%),
+      radial-gradient(1.5px 1.5px at 66% 34%, rgba(226, 232, 240, 0.35) 50%, transparent 51%),
+      radial-gradient(1px 1px at 78% 64%, rgba(226, 232, 240, 0.5) 50%, transparent 51%),
+      radial-gradient(1.5px 1.5px at 88% 18%, rgba(226, 232, 240, 0.45) 50%, transparent 51%),
+      radial-gradient(1px 1px at 18% 88%, rgba(226, 232, 240, 0.4) 50%, transparent 51%),
+      radial-gradient(1.5px 1.5px at 48% 46%, rgba(226, 232, 240, 0.3) 50%, transparent 51%),
+      radial-gradient(1px 1px at 72% 8%, rgba(226, 232, 240, 0.5) 50%, transparent 51%);
+    background-repeat: no-repeat;
+  }
+
+  /* Soft grid used behind the map placeholder so it reads as an intentional panel. */
+  .map-grid {
+    background-image:
+      linear-gradient(to right, rgba(159, 178, 188, 0.18) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(159, 178, 188, 0.18) 1px, transparent 1px);
+    background-size: 34px 34px;
+  }
+
+  .no-scrollbar {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Scroll reveal — a quiet fade-up, disabled by reduced motion below. */
+  .reveal {
+    opacity: 0;
+    transform: translateY(14px);
+    transition:
+      opacity 600ms cubic-bezier(0.22, 1, 0.36, 1),
+      transform 600ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+  }
+
+  /* Flat controls: color and border shifts only, no shadow bloom. */
+  .btn-animated {
+    transition:
+      background-color 200ms ease,
+      border-color 200ms ease,
+      color 200ms ease;
+  }
+
+  .btn-animated:hover:not(:disabled) {
+    transform: translateY(-1px);
+  }
+
+  .btn-animated:active:not(:disabled) {
+    transform: translateY(0);
+  }
+}
+
+/* Mount-entrance motion. Kept outside @layer so @starting-style is emitted
+   verbatim by Tailwind's layer processing. */
+@keyframes success-rise {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes badge-pop {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes success-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.success-enter {
+  animation: success-rise 400ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.success-badge-enter {
+  animation: badge-pop 250ms cubic-bezier(0.22, 1, 0.36, 1) 100ms both;
+}
+
+.dropdown-fade {
+  opacity: 1;
+  transition: opacity 160ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+@starting-style {
+  .dropdown-fade {
+    opacity: 0;
+  }
+}
+
+/* Interactive card lift. Hover media query prevents the sticky-hover flash
+   touch devices get from :hover styles. */
+.card-hover {
+  transition:
+    transform 200ms cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 200ms ease,
+    background-color 200ms ease;
+}
+@media (hover: hover) and (pointer: fine) {
+  .card-hover:hover {
+    transform: translateY(-2px);
+  }
+}
+
+.field-error,
+.error-enter {
+  opacity: 1;
+  transform: none;
+  transition:
+    opacity 150ms cubic-bezier(0.22, 1, 0.36, 1),
+    transform 150ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+@starting-style {
+  .field-error,
+  .error-enter {
+    opacity: 0;
+    transform: translateY(-2px);
+  }
+}
+
+.menu-sheet {
+  transition:
+    transform 320ms cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 320ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+.menu-sheet-hidden {
+  transform: translateY(100%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+    will-change: auto !important;
+  }
+
+  /* Gentler, not zero: keep short opacity fades for mount entrances. */
+  .success-enter,
+  .success-badge-enter {
+    animation: success-fade 150ms ease both !important;
+  }
+
+  .menu-sheet,
+  .menu-sheet-hidden {
+    transform: none !important;
+    transition: opacity 120ms ease !important;
+  }
+
+  .card-hover:hover {
+    transform: none;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
