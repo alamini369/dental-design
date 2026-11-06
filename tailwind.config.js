@@ -32,8 +32,18 @@ export default {
         whatsapp: "#e75e15",
       },
       fontFamily: {
-        heading: ["Inter", "Hind Siliguri", "system-ui", "sans-serif"],
-        body: ["Inter", "Hind Siliguri", "system-ui", "sans-serif"],
+        // Archivo (Omnibus-Type) is the single display face; body copy uses the
+        // OS-native UI font so the site never wears a stock web font.
+        heading: ["Archivo", "Hind Siliguri", "system-ui", "sans-serif"],
+        body: [
+          "-apple-system",
+          "BlinkMacSystemFont",
+          '"Segoe UI"',
+          "Roboto",
+          '"Helvetica Neue"',
+          "Arial",
+          "sans-serif",
+        ],
         bangla: ["Hind Siliguri", "system-ui", "sans-serif"],
         mono: ['"Fira Code"', '"JetBrains Mono"', '"Source Code Pro"', "monospace"],
       },

@@ -5,7 +5,7 @@ import ScrollReveal from "../ui/ScrollReveal";
 const items = [
   { icon: "HeartHandshake", titleKey: "trust.1.title", textKey: "trust.1.text" },
   { icon: "MessageSquareText", titleKey: "trust.2.title", textKey: "trust.2.text" },
-  { icon: "Sparkles", titleKey: "trust.3.title", textKey: "trust.3.text" },
+  { icon: "Wind", titleKey: "trust.3.title", textKey: "trust.3.text" },
   { icon: "MapPin", titleKey: "trust.4.title", textKey: "trust.4.text" },
 ];
 

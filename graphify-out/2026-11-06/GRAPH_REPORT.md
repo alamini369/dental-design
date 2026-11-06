@@ -1,10 +1,12 @@
-# Graph Report - Dental-Design  (2026-11-05)
+# Graph Report - Dental-Design  (2026-11-06)
 
 ## Corpus Check
-- cluster-only mode — file stats not available
+- 75 files · ~151,545 words
+- Verdict: corpus is large enough that graph structure adds value.
+- Unclassified: 7 file(s) not represented in the graph (top: (none) 2, .bin 1, .example 1)
 
 ## Summary
-- 316 nodes · 946 edges · 39 communities (22 shown, 17 thin omitted)
+- 314 nodes · 929 edges · 39 communities (22 shown, 17 thin omitted)
 - Extraction: 94% EXTRACTED · 6% INFERRED · 0% AMBIGUOUS · INFERRED: 59 edges (avg confidence: 0.88)
 - Token cost: 0 input · 0 output
 
@@ -14,7 +16,7 @@
 - Booking Flow and Clinic Data
 - package.json
 - Project Dependencies and Build Tools
-- AI Chatbot and Design Requirements
+- LanguageContext.jsx
 - Booking Process and WhatsApp Integration
 - Clinic Core Facts and Localization
 - Architecture and Design Principles
@@ -45,16 +47,16 @@
 - Teeth Whitening Service
 
 ## God Nodes (most connected - your core abstractions)
-1. `useLanguage()` - 66 edges
-2. `trackEvent()` - 37 edges
-3. `Button()` - 35 edges
-4. `ScrollReveal()` - 29 edges
-5. `lucide-react` - 29 edges
+1. `useLanguage()` - 64 edges
+2. `trackEvent()` - 35 edges
+3. `Button()` - 33 edges
+4. `lucide-react` - 28 edges
+5. `ScrollReveal()` - 27 edges
 6. `clinic` - 22 edges
 7. `CTABanner()` - 21 edges
-8. `Starfield()` - 21 edges
+8. `SEO()` - 20 edges
 9. `App()` - 19 edges
-10. `ANALYTICS_EVENTS` - 19 edges
+10. `ANALYTICS_EVENTS` - 18 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `Project Info (One Denta / Stale)` --semantically_similar_to--> `Clinic Info Content`  [AMBIGUOUS] [semantically similar]
@@ -79,28 +81,28 @@
 ## Communities (39 total, 17 thin omitted)
 
 ### Community 0 - "ScrollReveal"
-Cohesion: 0.13
-Nodes (21): cards, Comfort(), FAQSection(), initialsFor(), Reviews(), ServicesGrid(), items, TrustStrip() (+13 more)
+Cohesion: 0.14
+Nodes (24): cards, Comfort(), FAQSection(), Hero(), Location(), OfferBanner(), initialsFor(), Reviews() (+16 more)
 
 ### Community 1 - "lucide-react"
 Cohesion: 0.25
-Nodes (12): lucide-react, FloatingCTA(), sizes, variants, clinic, directionsUrl, mapPreviewUrl, getProblem() (+4 more)
+Nodes (20): CTABanner(), DoctorIntro(), PageHero(), ServicePageTemplate(), Button(), sizes, variants, ScrollReveal() (+12 more)
 
 ### Community 2 - "Booking Flow and Clinic Data"
-Cohesion: 0.13
-Nodes (23): react, react-router-dom, quickLinks, Header(), HeaderNavLink(), LanguageToggle(), Logo(), ToothMark() (+15 more)
+Cohesion: 0.22
+Nodes (15): lucide-react, react, react-router-dom, Header(), HeaderNavLink(), LanguageToggle(), Logo(), ToothMark() (+7 more)
 
 ### Community 3 - "package.json"
 Cohesion: 0.07
 Nodes (26): dependencies, lucide-react, react, react-dom, react-helmet-async, react-router-dom, devDependencies, autoprefixer (+18 more)
 
 ### Community 4 - "Project Dependencies and Build Tools"
-Cohesion: 0.16
-Nodes (17): react-dom, About, App(), Book, Contact, Home, NewPatients, NotFound (+9 more)
+Cohesion: 0.12
+Nodes (22): react-dom, About, App(), Book, Contact, Home, NewPatients, NotFound (+14 more)
 
-### Community 5 - "AI Chatbot and Design Requirements"
-Cohesion: 0.34
-Nodes (21): CTABanner(), DoctorIntro(), FeaturedTreatments(), Hero(), Location(), OfferBanner(), PageHero(), ServicePageTemplate() (+13 more)
+### Community 5 - "LanguageContext.jsx"
+Cohesion: 0.21
+Nodes (11): SEO(), BANGLA_DIGITS, dictionaries, interpolate(), LanguageContext, LanguageProvider(), LANGUAGES, readStoredLanguage() (+3 more)
 
 ### Community 6 - "Booking Process and WhatsApp Integration"
 Cohesion: 0.23
@@ -172,23 +174,23 @@ Nodes (3): Decorative Stars and Dots, Implant Service Icon, Dental Implant Illus
 
 ## Knowledge Gaps
 - **56 isolated node(s):** `autoprefixer`, `postcss`, `tailwindcss`, `Dental Fillings Service`, `Amber Color #F59E0B` (+51 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 107 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 108 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
 - **17 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `useLanguage()` connect `AI Chatbot and Design Requirements` to `ScrollReveal`, `lucide-react`, `Booking Flow and Clinic Data`, `Project Dependencies and Build Tools`, `Booking Process and WhatsApp Integration`?**
-  _High betweenness centrality (0.061) - this node is a cross-community bridge._
+- **Why does `useLanguage()` connect `ScrollReveal` to `lucide-react`, `Booking Flow and Clinic Data`, `Project Dependencies and Build Tools`, `LanguageContext.jsx`, `Booking Process and WhatsApp Integration`?**
+  _High betweenness centrality (0.057) - this node is a cross-community bridge._
 - **What connects `autoprefixer`, `postcss`, `tailwindcss` to the rest of the system?**
   _56 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `ScrollReveal` be split into smaller, more focused modules?**
-  _Cohesion score 0.12612612612612611 - nodes in this community are weakly interconnected._
-- **Why does `lucide-react` connect `lucide-react` to `ScrollReveal`, `Booking Flow and Clinic Data`, `package.json`, `AI Chatbot and Design Requirements`, `Booking Process and WhatsApp Integration`?**
-  _High betweenness centrality (0.052) - this node is a cross-community bridge._
-- **Should `Booking Flow and Clinic Data` be split into smaller, more focused modules?**
-  _Cohesion score 0.13257575757575757 - nodes in this community are weakly interconnected._
-- **Why does `react` connect `Booking Flow and Clinic Data` to `ScrollReveal`, `lucide-react`, `package.json`, `Project Dependencies and Build Tools`, `Booking Process and WhatsApp Integration`?**
+  _Cohesion score 0.13968253968253969 - nodes in this community are weakly interconnected._
+- **Why does `lucide-react` connect `Booking Flow and Clinic Data` to `ScrollReveal`, `lucide-react`, `package.json`, `Project Dependencies and Build Tools`, `LanguageContext.jsx`, `Booking Process and WhatsApp Integration`?**
+  _High betweenness centrality (0.051) - this node is a cross-community bridge._
+- **Should `package.json` be split into smaller, more focused modules?**
+  _Cohesion score 0.07407407407407407 - nodes in this community are weakly interconnected._
+- **Why does `react` connect `Booking Flow and Clinic Data` to `ScrollReveal`, `lucide-react`, `package.json`, `Project Dependencies and Build Tools`, `LanguageContext.jsx`, `Booking Process and WhatsApp Integration`?**
   _High betweenness centrality (0.030) - this node is a cross-community bridge._
 
 ### Low-confidence Hints

@@ -17,7 +17,6 @@ import { formatDateForMessage, formatTimeForMessage, todayISO } from "../../util
 import { validatePhone } from "../../utils/validatePhone";
 import { ANALYTICS_EVENTS, trackEvent } from "../../utils/analytics";
 import Button from "../ui/Button";
-import Starfield from "../ui/Starfield";
 
 const emptyValues = {
   name: "",
@@ -126,7 +125,6 @@ export default function BookingForm({ className = "" }) {
       <div
         className={`success-enter relative isolate overflow-hidden rounded-panel bg-cosmic p-6 md:p-10 ${className}`}
       >
-        <Starfield />
         <div ref={successRef} tabIndex={-1} role="status" aria-live="polite" className="relative">
           <span className="success-badge-enter flex h-12 w-12 items-center justify-center rounded-full border border-signal/60 text-signal">
             <CheckCircle2 aria-hidden="true" className="h-6 w-6" strokeWidth={1.8} />

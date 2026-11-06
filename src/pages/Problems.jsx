@@ -9,7 +9,6 @@ import PageHero from "../components/sections/PageHero";
 import ScrollReveal from "../components/ui/ScrollReveal";
 import Button from "../components/ui/Button";
 import CTABanner from "../components/sections/CTABanner";
-import Starfield from "../components/ui/Starfield";
 import { getIcon } from "../utils/icons";
 import { ANALYTICS_EVENTS, trackEvent } from "../utils/analytics";
 
@@ -85,7 +84,6 @@ export default function Problems() {
           </div>
 
           <div className="relative isolate mt-10 overflow-hidden rounded-panel bg-cosmic">
-            <Starfield />
             <div className="relative flex flex-col gap-5 p-6 md:flex-row md:items-center md:justify-between md:p-10">
               <div className="flex items-start gap-3">
                 <AlertTriangle

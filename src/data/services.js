@@ -54,7 +54,7 @@ export const services = [
     slug: "teeth-cleaning",
     featured: false,
     order: 3,
-    icon: "Sparkles",
+    icon: "Droplets",
     image: "/images/service-cleaning.svg",
     imageAltKey: "services.teeth-cleaning.imageAlt",
     titleKey: "services.teeth-cleaning.title",

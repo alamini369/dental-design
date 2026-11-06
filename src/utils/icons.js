@@ -12,7 +12,6 @@ import {
   Microscope,
   ShieldCheck,
   Smile,
-  Sparkles,
   Stethoscope,
   Sun,
   Thermometer,
@@ -34,7 +33,6 @@ const iconMap = {
   Microscope,
   ShieldCheck,
   Smile,
-  Sparkles,
   Stethoscope,
   Sun,
   Thermometer,
@@ -43,5 +41,5 @@ const iconMap = {
 };
 
 export function getIcon(name) {
-  return iconMap[name] ?? Sparkles;
+  return iconMap[name] ?? Stethoscope;
 }

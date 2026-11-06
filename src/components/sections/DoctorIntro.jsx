@@ -4,7 +4,6 @@ import { useLanguage } from "../../i18n/LanguageContext";
 import { ANALYTICS_EVENTS, trackEvent } from "../../utils/analytics";
 import Button from "../ui/Button";
 import ScrollReveal from "../ui/ScrollReveal";
-import Starfield from "../ui/Starfield";
 
 export default function DoctorIntro() {
   const { t } = useLanguage();
@@ -38,7 +37,6 @@ export default function DoctorIntro() {
 
         <ScrollReveal delay={80} className="relative mx-auto w-full max-w-md lg:max-w-none">
           <div className="relative overflow-hidden rounded-panel border border-fog/20 bg-cosmic p-3 md:p-4">
-            <Starfield />
             <img
               src="/images/doctor-mustak.svg"
               alt={t("doctor.imageAlt")}

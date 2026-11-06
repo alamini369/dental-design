@@ -5,14 +5,12 @@ import { buildWhatsAppChatLink } from "../../utils/buildWhatsAppLink";
 import { ANALYTICS_EVENTS, trackEvent } from "../../utils/analytics";
 import Button from "../ui/Button";
 import ScrollReveal from "../ui/ScrollReveal";
-import Starfield from "../ui/Starfield";
 
 export default function CTABanner() {
   const { t } = useLanguage();
 
   return (
     <section className="relative isolate overflow-hidden bg-cosmic">
-      <Starfield />
       <div className="container-page relative py-16 md:py-24">
         <ScrollReveal className="mx-auto flex max-w-3xl flex-col items-center text-center">
           <p className="eyebrow eyebrow-light">{t("cta.eyebrow")}</p>
