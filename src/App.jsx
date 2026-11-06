@@ -1,6 +1,7 @@
 import { lazy, Suspense } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
+import { Analytics } from "@vercel/analytics/react";
 import { LanguageProvider, useLanguage } from "./i18n/LanguageContext";
 import Header from "./components/layout/Header";
 import Footer from "./components/layout/Footer";
@@ -79,6 +80,7 @@ export default function App() {
             <div aria-hidden="true" className="h-24 bg-cosmic md:hidden" />
             <FloatingCTA />
           </div>
+          <Analytics />
         </BrowserRouter>
       </LanguageProvider>
     </HelmetProvider>
